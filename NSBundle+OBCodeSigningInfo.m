@@ -53,7 +53,7 @@
     static const void *kOBCodeSignStateKey;
     NSNumber *resultStateNumber = objc_getAssociatedObject(self, kOBCodeSignStateKey);
     if (resultStateNumber) {
-        return [resultStateNumber intValue];
+        return (OBCodeSignState) [resultStateNumber intValue];
     }
 
     // Determine code sign status
